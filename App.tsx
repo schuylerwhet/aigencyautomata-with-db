@@ -6,14 +6,12 @@ import Ticker from './components/Ticker';
 import Services from './components/Services';
 import Solutions from './components/Solutions';
 import Calculator from './components/Calculator';
-import Blog from './components/Blog';
 import Contact from './components/Contact';
 import Chatbot from './components/Chatbot';
 import AuditSection from './components/AuditSection';
 import AEOAuditSection from './components/AEOAuditSection';
 import ObjectionHandlers from './components/ObjectionHandlers';
 import LeadMagnet from './components/LeadMagnet';
-import BlogPage from './pages/BlogPage';
 import AdminDashboard from './pages/AdminDashboard';
 import AdminProjects from './pages/AdminProjects';
 import AdminRedditAgent from './pages/AdminRedditAgent';
@@ -48,8 +46,6 @@ const LandingPage: React.FC = () => (
     <ObjectionHandlers />
     <SectionDivider />
     <Calculator />
-    <SectionDivider />
-    <Blog limit={4} showViewAll={true} />
     <SectionDivider />
     <Contact />
     <LeadMagnet />
@@ -104,7 +100,6 @@ const App: React.FC = () => {
 
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/blog" element={<BlogPage />} />
 
         {/* Portal Routes */}
         <Route
@@ -167,7 +162,6 @@ const App: React.FC = () => {
                   <a href="#services" className="block text-sm text-gray-500 hover:text-white transition-colors uppercase tracking-wider font-medium">Services</a>
                   <a href="#solutions" className="block text-sm text-gray-500 hover:text-white transition-colors uppercase tracking-wider font-medium">Solutions</a>
                   <a href="#roi" className="block text-sm text-gray-500 hover:text-white transition-colors uppercase tracking-wider font-medium">ROI Calculator</a>
-                  <Link to="/blog" className="block text-sm text-gray-500 hover:text-white transition-colors uppercase tracking-wider font-medium">Insights</Link>
                   <a href="#contact" className="block text-sm text-gray-500 hover:text-white transition-colors uppercase tracking-wider font-medium">Contact</a>
                 </div>
               </div>
