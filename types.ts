@@ -24,22 +24,6 @@ export interface ServiceItem {
   icon: string; // SVG path data
 }
 
-export interface BlogPost {
-  id: string;
-  title: string;
-  category: string;
-  date: string;
-  excerpt: string;
-  content?: string; // Markdown-style content
-  tags: string[];
-  link: string;
-  image?: string;
-  notionId: string;
-  author?: string;
-  status?: 'Published' | 'Draft' | 'Archived';
-  readingTime?: string;
-}
-
 export interface ChatMessage {
   id: string;
   role: 'user' | 'model';

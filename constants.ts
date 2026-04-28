@@ -1,9 +1,5 @@
 
-import { ServiceItem, BlogPost, ServiceCategory } from './types';
-
-export const NOTION_CONFIG = {
-  DATABASE_ID: '8166afbb701e82f28b94811615cd4ce3',
-};
+import { ServiceItem, ServiceCategory } from './types';
 
 export const SERVICES: ServiceItem[] = [
   { 
@@ -78,63 +74,4 @@ export const SERVICES: ServiceItem[] = [
     description: 'Precision digital marketing and performance-optimized web design built for conversion density and speed.',
     icon: 'M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9'
   },
-];
-
-export const BLOG_POSTS: BlogPost[] = [
-  {
-    id: 'n1',
-    notionId: 'n1',
-    title: 'The Industrialization of Intelligence',
-    category: 'Analysis',
-    date: 'Feb 12, 2024',
-    readingTime: '6 MIN',
-    author: 'SYSTEMS_CORE',
-    excerpt: 'How Swiss-style precision is meeting the explosive growth of large language models to redefine corporate output.',
-    content: `
-### The New Paradigm
-In the history of industry, we have seen two major shifts: the mechanization of physical labor and the digitization of data. Today, we enter the third: the industrialization of intelligence.
-
-Large Language Models (LLMs) are no longer novelty tools for generating text; they are the new steam engines. However, a steam engine without a locomotive is just hot air. At AigencyAutomata, we believe that the true value of AI lies in its integration into rigorous, deterministic workflows.
-
-### Swiss Precision in a Stochastic World
-AI is inherently probabilistic. Swiss design is inherently precise. The challenge of modern marketing is bridging this gap. We use "Agents" not just as conversational interfaces, but as logical gates in a massive operational grid.
-
-1. **Deterministic Mapping:** Every AI input is validated against brand-core logic.
-2. **Modular Architecture:** Systems are built as discrete blocks, easily swapped as models evolve.
-3. **Feedback Loops:** Continuous error-correction cycles that mirror precision watchmaking.
-
-The result is a system that doesn't just "think"—it executes with zero operational drift.
-    `,
-    tags: ['Strategy', 'AI'],
-    link: '#',
-    image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'n2',
-    notionId: 'n2',
-    title: 'Capturing High-Intent Leads via AEO',
-    category: 'Marketing',
-    date: 'Jan 28, 2024',
-    readingTime: '4 MIN',
-    author: 'REVENUE_OPS',
-    excerpt: 'SEO is dead. Answer Engine Optimization is the new frontier for agencies competing in an AI-first search world.',
-    content: `
-### The Death of the Click
-For twenty years, marketing has been defined by the "Search Engine Results Page" (SERP). We optimized for keywords to get a click. But users aren't looking for links anymore—they're looking for answers.
-
-Answer Engine Optimization (AEO) is the process of structuring your company’s neural data so that LLMs (like Gemini, Perplexity, and GPT-4) recommend *you* as the definitive solution.
-
-### How to Win the Answer
-To win in the AEO era, your brand must exist as "structured knowledge" rather than just "content."
-
-- **Schema Rigidity:** Every pixel of data must follow strict JSON-LD protocols.
-- **Topical Authority:** You cannot be a generalist. AI rewards the deep expert.
-- **The Citation Flywheel:** Building a network of high-trust references that AI systems use for verification.
-
-At AigencyAutomata, we don't just build websites; we build Knowledge Bases that AI engines find irresistible.
-    `,
-    tags: ['SEO', 'AEO'],
-    link: '#',
-    image: 'https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&w=800&q=80'
-  }
 ];
