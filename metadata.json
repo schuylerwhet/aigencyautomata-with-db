@@ -1,0 +1,7 @@
+{
+  "name": "aigencyautomata",
+  "description": "Digital marketing and AI automation agency with Swiss design aesthetics, featuring an intelligent chatbot and ROI calculator.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

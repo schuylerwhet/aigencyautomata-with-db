@@ -1,0 +1,79 @@
+# AIGENCY AUTOMATA: 47-Point Robot Work Audit Checklist
+## Find the "Robot Work" hiding in your workflows.
+
+This checklist is designed to help business owners, sales leaders, and ops managers identify repetitive, low-leverage tasks that should be handled by custom AI agents. 
+
+### Instructions:
+Check every box that applies to your current team. If you check more than 10, your team is likely wasting 15+ hours per week on "Robot Work."
+
+---
+
+### [ ] SECTION 1: LEAD GENERATION & MARKETING
+1. [ ] Manual lead entry from website forms into CRM.
+2. [ ] Sending "Thanks for your interest" emails manually.
+3. [ ] Qualifying leads by manually checking LinkedIn profiles or websites.
+4. [ ] Categorizing inbound leads by industry, size, or budget.
+5. [ ] Manually adding leads to email marketing sequences (Mailchimp, HubSpot, etc.).
+6. [ ] Checking for and merging duplicate leads across different platforms.
+7. [ ] Hand-typing notifications to sales reps about new high-intent leads.
+8. [ ] Posting the same content across multiple social channels manually.
+9. [ ] Responding to basic FAQ comments on social media/ads.
+10. [ ] Tracking ad spend vs. lead volume in a manual daily/weekly spreadsheet.
+
+### [ ] SECTION 2: SALES & CRM HYGIENE
+11. [ ] Updating lead status/tags in CRM after every call.
+12. [ ] Manually scheduling follow-up tasks for yourself or reps.
+13. [ ] Creating and sending personalized meeting invites and calendar links.
+14. [ ] Transcribing call notes and recording them into CRM fields.
+15. [ ] Searching for prospect email addresses or phone numbers one-by-one.
+16. [ ] Manually drafting "personalized" outreach based on recent LinkedIn activity.
+17. [ ] Moving deals between pipeline stages manually in your CRM.
+18. [ ] Generating sales contracts or proposals from templates by copy-pasting details.
+19. [ ] Following up with "ghosted" leads who didn't show up for a demo.
+20. [ ] Periodic manual cleanup of dead or inactive leads in the database.
+
+### [ ] SECTION 3: OPERATIONS & WORKFLOW
+21. [ ] Rescuing data from one tool to place it in another (The "Copy-Paste Cycle").
+22. [ ] Manually assigning project tasks to team members based on new orders.
+23. [ ] Chasing team members for project status updates.
+24. [ ] Filing digital documents, receipts, or contracts into specific folders.
+25. [ ] Managing permissions/access for new team members across various apps.
+26. [ ] Updating client project boards (Trello, Asana, Monday) manually.
+27. [ ] Cross-checking data between two systems to identify and fix errors.
+28. [ ] Sending internal reminders for upcoming or missed deadlines.
+29. [ ] Manually formatting data/reports for internal weekly syncs.
+30. [ ] Monitoring generic inboxes (info@, support@) just to route emails.
+
+### [ ] SECTION 4: CUSTOMER SUCCESS & ONBOARDING
+31. [ ] Sending onboarding questionnaires to new clients manually.
+32. [ ] Creating shared folders, Slack channels, or portals for new clients.
+33. [ ] Manually setting up new client accounts in your internal software.
+34. [ ] Sending physical or digital welcome gifts/packages.
+35. [ ] Manually verifying if a client has completed their first "Action Step."
+36. [ ] Sending manual "How's it going?" check-in emails.
+37. [ ] Requesting reviews or testimonials manually after a project closes.
+38. [ ] Handling Support tickets that have standard, repetitive answers.
+39. [ ] Generating and sending monthly success/progress reports.
+40. [ ] Processing subscription changes or cancellations in your billing tool.
+
+### [ ] SECTION 5: DATA ANALYSIS & REPORTING
+41. [ ] Exporting CSVs from different sources just to merge them in Excel.
+42. [ ] Building "Pivot Tables" manually to see monthly performance.
+43. [ ] Cleaning up trailing spaces, case-styles, or formatting in data exports.
+44. [ ] Calculating ROI, LTV, or CAC in a spreadsheet manually every month.
+45. [ ] Building/Updating an executive dashboard manually every Monday morning.
+46. [ ] Syncing contact information between your CRM and Billing software.
+47. [ ] Identifying "At Risk" (Churn) clients by manually scanning usage data.
+
+---
+
+## 🚀 THE VERDICT
+- **0–5 Checked:** You have a highly optimized operation. You probably already use automation.
+- **6–15 Checked:** You are losing roughly 10–12 hours a week per team member. You are ready for a **Workflow Audit**.
+- **15+ Checked:** Your team is drowning in "Robot Work." You are likely overstaffed or under-profited by 20–30%.
+
+**STOP DOING ROBOT WORK.**
+Book your Workflow Audit at [aigencyautomata.com](https://aigencyautomata.com)
+
+---
+© 2026 AIgency Automata. All rights reserved.

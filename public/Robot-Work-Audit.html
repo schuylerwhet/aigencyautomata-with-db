@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Work Audit Checklist | AIgency Automata</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700;900&family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --red: #ff0000;
+            --black: #000000;
+            --white: #ffffff;
+            --gray-100: #f3f4f6;
+            --gray-400: #9ca3af;
+            --gray-800: #1f2937;
+        }
+
+        @media print {
+            .no-print { display: none !important; }
+            body { padding: 0 !important; }
+            .page-break { page-break-before: always; }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            line-height: 1.5;
+            color: var(--black);
+            background: var(--white);
+            padding: 4rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header {
+            border-bottom: 8px solid var(--black);
+            padding-bottom: 2rem;
+            margin-bottom: 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .logo {
+            font-weight: 900;
+            font-size: 1.5rem;
+            letter-spacing: -0.05em;
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: var(--red);
+        }
+
+        .resource-tag {
+            font-family: 'IBM Plex Mono', monospace;
+            background: var(--red);
+            color: var(--white);
+            padding: 0.25rem 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        h1 {
+            font-weight: 900;
+            font-size: 4rem;
+            text-transform: uppercase;
+            line-height: 0.9;
+            letter-spacing: -0.04em;
+            margin-bottom: 1.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--gray-800);
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .intro-box {
+            background: var(--gray-100);
+            border-left: 8px solid var(--red);
+            padding: 2rem;
+            margin-bottom: 4rem;
+            font-style: italic;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid var(--black);
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-num {
+            font-family: 'IBM Plex Mono', monospace;
+            font-weight: 700;
+            color: var(--red);
+            margin-right: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .section-title {
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 1.25rem;
+        }
+
+        .checklist {
+            list-style: none;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--gray-100);
+        }
+
+        .checkbox {
+            width: 24px;
+            height: 24px;
+            border: 2px solid var(--black);
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+            margin-top: 0.25rem;
+        }
+
+        .item-text {
+            font-size: 1.125rem;
+            font-weight: 400;
+        }
+
+        .item-text strong {
+            font-weight: 700;
+            color: var(--red);
+        }
+
+        .cta-box {
+            margin-top: 6rem;
+            border: 10px solid var(--black);
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .cta-box h2 {
+            font-weight: 900;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .cta-box p {
+            color: var(--gray-800);
+            margin-bottom: 2.5rem;
+            font-size: 1.125rem;
+        }
+
+        .btn {
+            background: var(--black);
+            color: var(--white);
+            text-decoration: none;
+            padding: 1.25rem 2.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--red);
+        }
+
+        .footer {
+            margin-top: 4rem;
+            display: flex;
+            justify-content: space-between;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--gray-400);
+        }
+
+        .download-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--red);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            cursor: pointer;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+        }
+
+        .download-btn:hover {
+            background: black;
+        }
+    </style>
+</head>
+<body>
+    <button class="no-print download-btn" onclick="window.print()">Print to PDF</button>
+
+    <div class="header">
+        <div class="logo">AIGENCY<span>AUTOMATA</span></div>
+        <div class="resource-tag">Free_Resource_v1.0</div>
+    </div>
+
+    <h1>The 47-Point <br>Robot Work <br>Audit Checklist</h1>
+    <p class="subtitle">Every automation opportunity hiding in your workflows — found, named, and ready to eliminate.</p>
+
+    <div class="intro-box">
+        "Use this checklist as a walk-through of your week. Work through each section honestly. Every 'yes' is a candidate for automation."
+    </div>
+
+    <!-- Section 1 -->
+    <div class="section">
+        <div class="section-header">
+            <span class="section-num">01</span>
+            <span class="section-title">Surface the Repetition</span>
+        </div>
+        <ul class="checklist">
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">List your top 10 recurring tasks from the last 2 weeks.</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Highlight anything you do more than once per week.</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Flag any task that has the same steps every time.</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Circle anything that requires <strong>copying/pasting</strong> between tools.</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Mark every time you re-type information that already exists somewhere else.</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Identify every place you "check" something manually (status, inbox, spreadsheet, dashboard).</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Find every step where you "wait" for someone else (approvals, replies, assets, sign-off).</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Note every moment you "remind" someone (follow-ups, nudges, pings).</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">List every place you collect the same data in multiple systems.</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Mark any task that starts with <em>"open X and look for Y."</em></div></li>
+        </ul>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section">
+        <div class="section-header">
+            <span class="section-num">02</span>
+            <span class="section-title">Map the Workflow Anatomy</span>
+        </div>
+        <ul class="checklist">
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Define the <strong>trigger</strong>: what event starts it?</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Define the <strong>end condition</strong>: what does "done" mean?</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Write the <strong>inputs</strong> required (data, files, approvals, context).</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Write the <strong>outputs</strong> produced (emails, updates, records, decisions).</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Identify every <strong>decision point</strong> ("if this, then that").</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Identify every <strong>exception path</strong> ("unless…", "sometimes…").</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Note where <strong>context is lost</strong> (handoffs, tool switches, DMs).</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Identify the <strong>source of truth</strong> for each key field (name, status, owner, due date).</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Flag workflows with <strong>unclear ownership</strong> (everyone/anyone/no one).</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Flag workflows with <strong>unclear SLAs</strong> (no time expectation).</div></li>
+        </ul>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- Section 3 -->
+    <div class="section">
+        <div class="section-header">
+            <span class="section-num">03</span>
+            <span class="section-title">Classify the Work Type</span>
+        </div>
+        <ul class="checklist">
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Count how many tools the workflow touches. <strong>More tools = more automation opportunity.</strong></div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Find steps that are purely <strong>data movement</strong> (A → B).</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Find steps that are <strong>formatting/cleanup</strong> (renaming, reformatting, resizing, converting).</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Find steps that are <strong>categorization/tagging</strong> (labels, folders, properties, statuses).</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Find steps that are <strong>routing</strong> (assigning, moving, delegating, escalating).</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Find steps that are <strong>duplication</strong> (same message sent to multiple places).</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Find steps that are <strong>aggregation</strong> (compile updates, weekly reports, rollups).</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Find steps that are <strong>reconciliation</strong> (comparing lists, matching records).</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Find steps that are <strong>scheduling</strong> (finding time, sending invites, rescheduling).</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Find steps that are <strong>documentation</strong> (meeting notes, summaries, decision logs).</div></li>
+        </ul>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section">
+        <div class="section-header">
+            <span class="section-num">04</span>
+            <span class="section-title">Audit Your Communications</span>
+        </div>
+        <ul class="checklist">
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Locate every <strong>recurring message</strong> you send (client updates, internal updates, follow-ups).</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Locate every repeated <strong>"explainer"</strong> you write (how we do X, FAQs, onboarding).</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Locate every repeated <strong>"ask"</strong> you make (requesting assets, approvals, status updates).</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Find every meeting that exists mainly to <strong>share status</strong>.</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Find every meeting output that should be a <strong>structured artifact</strong> (tasks, decisions, next steps).</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Identify where meeting notes are taken but <strong>not converted into tasks</strong> automatically.</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Identify where action items are created but <strong>not assigned or scheduled</strong>.</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Identify where tasks are assigned but <strong>not tracked to completion</strong>.</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Identify where deliverables ship but <strong>learnings aren't captured</strong>.</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Identify where the <strong>same question is answered repeatedly</strong> in Slack/email.</div></li>
+        </ul>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="section">
+        <div class="section-header">
+            <span class="section-num">05</span>
+            <span class="section-title">Find the Automation Opportunities</span>
+        </div>
+        <ul class="checklist">
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Mark any workflow where the <strong>"best next action" is predictable</strong> from context.</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Mark any workflow with <strong>high-volume, low-risk decisions</strong> (approve, route, archive, label).</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Mark any workflow where a <strong>template</strong> could replace free-form work (intake, briefs, reports).</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Mark any workflow where a <strong>form</strong> could replace back-and-forth messaging.</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Mark any workflow where a <strong>checklist</strong> could prevent errors (handoff, QA, launch).</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">Identify any workflow with <strong>measurable success criteria</strong> (conversion, response time, cycle time).</div></li>
+            <li class="checklist-item"><div class="checkbox"></div><div class="item-text">For each flagged item, write one <strong>automation hypothesis</strong>.</div></li>
+        </ul>
+    </div>
+
+    <div class="cta-box">
+        <p class="resource-tag" style="margin-bottom: 1rem; display: inline-block;">Ready to build?</p>
+        <h2>Go from checklist to system.</h2>
+        <p>Book a free 30-minute Automation Audit where we walk through your top 3–5 opportunities and prioritize them by ROI.</p>
+        <a href="https://calendar.app.google/xUxvNAFCRzkpmkfX6" target="_blank" class="btn">Book My Audit →</a>
+    </div>
+
+    <div class="footer">
+        <div>© 2024 AIgency Automata</div>
+        <div>All Systems Operational // AGENT_MODE_ACTIVE</div>
+    </div>
+</body>
+</html>
