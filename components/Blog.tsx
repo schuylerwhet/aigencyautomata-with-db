@@ -1,10 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { BlogPost } from '../types';
 import { fetchLatestBlogPosts, fetchPostContent } from '../services/notion';
-import { NOTION_CONFIG } from '../constants';
-import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { blink } from '../src/lib/blink';
 
 interface BlogProps {
   limit?: number;
@@ -23,7 +21,6 @@ const Blog: React.FC<BlogProps> = ({
   const [isLoading, setIsLoading] = useState(true);
   const [isSyncing, setIsSyncing] = useState(false);
   const [isConnected, setIsConnected] = useState<boolean | null>(null);
-  const [syncLogs, setSyncLogs] = useState<string[]>([]);
   const [selectedPost, setSelectedPost] = useState<(BlogPost & { syncHash?: string }) | null>(null);
   const [isFetchingContent, setIsFetchingContent] = useState(false);
   const [readProgress, setReadProgress] = useState(0);
@@ -63,16 +60,13 @@ const Blog: React.FC<BlogProps> = ({
     show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } as any }
   };
 
-  const addLog = (msg: string) => {
-    setSyncLogs(prev => [...prev.slice(-4), `> ${msg}`]);
-  };
-
   const checkConnection = async () => {
     try {
-      const status = await blink.connectors.status('notion');
-      setIsConnected(status.data.connected);
-      return status.data.connected;
-    } catch (e) {
+      const res = await fetch('/api/blog?limit=1');
+      const connected = res.ok;
+      setIsConnected(connected);
+      return connected;
+    } catch {
       setIsConnected(false);
       return false;
     }
@@ -81,26 +75,10 @@ const Blog: React.FC<BlogProps> = ({
   const performSync = async () => {
     setIsLoading(true);
     setIsSyncing(true);
-    setSyncLogs([]);
-    addLog('INITIALIZING_SYNC_ENGINE...');
-    
-    const connected = await checkConnection();
-    if (!connected) {
-      addLog('NOTION_NOT_CONNECTED');
-    } else {
-      addLog(`CONNECTING_TO_DB_${NOTION_CONFIG.DATABASE_ID.slice(0, 8)}...`);
-    }
-    
-    setTimeout(() => addLog('AUTHORIZING_ACCESS_TOKEN...'), 600);
-    setTimeout(() => addLog('FETCHING_PAGE_METADATA...'), 1200);
-    setTimeout(() => addLog('MAPPING_PROPERTIES_TO_GRID...'), 1800);
-
+    await checkConnection();
     try {
       const data = await fetchLatestBlogPosts(limit || 100);
       setPosts(data);
-      addLog('SYNC_COMPLETE_STATUS_200');
-    } catch (e) {
-      addLog('SYNC_ERROR_CONNECTION_FAILED');
     } finally {
       setIsLoading(false);
       setIsSyncing(false);

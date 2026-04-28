@@ -2,8 +2,7 @@
 import { ServiceItem, BlogPost, ServiceCategory } from './types';
 
 export const NOTION_CONFIG = {
-  DATABASE_ID: 'af652dc754354da181432db464711df0',
-  INTERNAL_TOKEN: process.env.NOTION_TOKEN || process.env.VITE_NOTION_TOKEN || ''
+  DATABASE_ID: '8166afbb701e82f28b94811615cd4ce3',
 };
 
 export const SERVICES: ServiceItem[] = [
