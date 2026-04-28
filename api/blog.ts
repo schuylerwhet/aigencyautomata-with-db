@@ -1,5 +1,7 @@
 export const config = { runtime: "edge" };
 
+export const config = { runtime: "edge" };
+
 const NOTION_TOKEN = process.env.NOTION_TOKEN;
 const DATABASE_ID = process.env.NOTION_DATABASE_ID || '8166afbb701e82f28b94811615cd4ce3';
 const NOTION_VERSION = '2022-06-28';
