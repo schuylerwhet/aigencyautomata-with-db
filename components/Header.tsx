@@ -146,58 +146,61 @@ const Header: React.FC = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute top-20 left-0 w-full glass-header-scrolled overflow-hidden md:hidden z  Lueer-scrolled overflow-te/10 :hidden z  Lity:  t/footer>
-      )}
+            className="absolute top-20 left-0 w-full glass-header-scrolled overflow-hidden md:hidden z-40"
+            role="navigation"
+            aria-label="Mobile navigation"
+          >
+            <div className="p-8 flex flex-col space-y-8">
+              <div className="flex flex-col space-y-6 text-left">
+                <NavLink to="#services" className="text-4xl font-black text-white uppercase tracking-tighter hover:text-red-600 transition-colors">Services</NavLink>
+                <NavLink to="#roi" className="text-4xl font-black text-white uppercase tracking-tighter hover:text-red-600 transition-colors">ROI</NavLink>
+              </div>
 
-      {!isPortal &n-e/1e5P_uratiL    d0Ne}}
-            exit={{ opId={i   M, heigh 1, 0px] text-gray-700 fd tracking-widest uppercase text-gheigh4>
-          <moe */}
-    s-center space-x-6 n 
-     ner noreferrer" className="block tex transition-ver:w-full transitiy-700 fd tracking-win-300" />
-      heigh4>
-          <moe */}
-    s-center space-x-6 n 
-     ner noreferrer" className="block tex titin-ver:w-full transitiy-70dium">Contact</a>
-        </div>
+              <div className="pt-8 border-t border-white/5 flex flex-col space-y-6">
+                {isAuthenticated ? (
+                  <div className="flex flex-col space-y-4">
+                    <Link 
+                      to={portalPath} 
+                      className="text-white font-bold uppercase tracking-[0.3em] text-[10px]"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      [ {portalLabel} ]
+                    </Link>
+                    <button 
+                      onClick={() => { logout(); setIsMobileMenuOpen(false); }}
+                      className="text-gray-500 font-bold uppercase tracking-[0.3em] text-[10px] text-left hover:text-white"
+                    >
+                      [ LOGOUT_SESSION ]
+                    </button>
+                  </div>
+                ) : (
+                  <button 
+                    onClick={() => { login(); setIsMobileMenuOpen(false); }}
+                    className="text-white font-bold uppercase tracking-[0.3em] text-[10px] text-left"
+                  >
+                    [ AUTH_REQUIRED / LOGIN ]
+                  </button>
+                )}
+                
+                <a 
+                  href="https://calendar.app.google/xUxvNAFCRzkpmkfX6" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-red-600 text-white px-8 py-5 font-black uppercase tracking-[0.4em] text-xs text-center hover:bg-red-500 transition-colors"
+                >
+                  Book Audit
+                </a>
+              </div>
 
-            {/* Bottom Row */}
-            <divd={i   M,0px] text-gray-700 on-all duration-300" />
-         iL    d0Ne}}
-            exit={{ opId={i   M flex-col md:flex-iL    dlassName="flex items-cccccccenter space-x-6Name="flex items-ccccccc" />
-      heigh}
-    assName="hdiv>
-                <h4 classNa      t="_blank"
-               href={to} 
-          className={className}
-                  lex-col md:flex-iL      [-b border-red- ]ex-col md:flex-iL    dMATA</span>
-               d    {portalLabel}
-              href={to} 
-  {d] = us();         className={classNa;  transition={{               </span>
-             assName="hdiv>
-                <h4 classNa       heigh 1,      <a href="#" t="_blank"
-           lex-col md:flex-iL      [-LOGOUT_SESSION ]ex-col md:flex-iL    dM              >
-    iL    dM-medium">The Swiss DitrokeWidth={2} d="M6    d    {portalLabel}
-            href={to} 
-  {d] =in();         className={classNa;  transition={{         " />
-      heigh}
-    assName="hdiv>
-                <h4 classNa       heigh 1, 0ransition={{       lex-col md:flex-iL    [ AUTH_REQUIRED /-LOGIN ]ex-col md:flex-iL  dM              >
-    iL  ame}
-              ll transitiy-700 f             <div claName="mt-8">
-                  <a 
-                    href="https://caldar.app.google/xUxvNAFCRzkpmkfX6"                    target="_blank"
-               </Routes noreferrer"
-         8  cl5           <div>
-                <44 classNaransssNa:hiddensName="hidden md:block bg-reborder border-whitttttttlex-col md:flex-iL  black text-xs trackiny-700 flassName="hover:tedium">Contact</a>
-        </div>
-
-         assNa 8    "flex itemdiv className=div>
-                <5-[10px] text-gray-700 assNameStatus:{new Date().e="te //       _, cl_=> setsName="hover:tedium">Cme="hover:tedium">Cme="hover:t-red-500um">Cme="hove)sActive ? button>
-      </div>
-</      !isPortal && <Chatbot />}
- { Lin   <Analytics />
-    </div>
+              <div className="pt-8 text-[8px] font-mono text-gray-700 uppercase tracking-[0.5em]">
+                System_Status: Operational_v4.2 // Mobile_Node_Active
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
   );
 };
 
-export default App;
+export default Header;
