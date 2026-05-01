@@ -46,15 +46,14 @@ const Hero: React.FC = () => {
             >
               <h4 className="text-red-600 font-bold tracking-[0.4em] uppercase mb-6 text-xs flex items-center">
                 <span className="w-2 h-2 bg-red-600 rounded-full mr-3 animate-pulse"></span>
-                System_Operational_v4.2
+                AI Automation & Digital Marketing
               </h4>
-              <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white leading-[0.85] tracking-tighter mb-10 uppercase">
-                SCALE <br />
-                WITHOUT <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-white to-white/40">LIMITS</span>
+              <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white leading-[0.9] tracking-tighter mb-10">
+                Your Business Is Great.<br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-white to-white/40">Your Systems Are Losing You Clients.</span>
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl text-gray-400 max-w-2xl leading-relaxed font-light border-l-2 md:border-l border-red-600/60 pl-6 md:pl-8">
-                We build the best ROI-driven AI solutions that kill your team's busywork. Premier AI automation and digital marketing agency for home services, HVAC, and high-growth SMBs.
+                Most small businesses lose 20–40% of their inbound leads to slow follow-up, missed calls, and pipelines that live in someone's inbox. We fix that — with AI automation and digital marketing built as one connected system.
               </p>
             </motion.div>
           </div>
@@ -117,14 +116,14 @@ const Hero: React.FC = () => {
               className="group bg-red-600 hover:bg-white text-white hover:text-red-600 text-lg font-bold uppercase px-10 py-5 tracking-widest transition-all duration-500 relative overflow-hidden btn-primary"
             >
               <span className="relative z-10 flex items-center">
-                Audit My Workflow
+                → Book Your Free Audit
                 <svg className="w-5 h-5 ml-4 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
               </span>
             </a>
-            <a href="#services" className="group border border-white/20 hover:border-white text-white text-lg font-bold uppercase px-10 py-5 tracking-widest transition-all duration-500 hover:bg-white/5">
-              View Systems
+            <a href="#how-it-works" className="group border border-white/20 hover:border-white text-white text-lg font-bold uppercase px-10 py-5 tracking-widest transition-all duration-500 hover:bg-white/5">
+              See How It Works
             </a>
           </div>
 
@@ -137,7 +136,7 @@ const Hero: React.FC = () => {
             <p className="text-sm text-gray-500 font-mono uppercase tracking-[0.2em]">
               Not ready to commit? <br />
               <a href="#lead-magnet" className="text-white hover:text-red-500 transition-colors font-bold mt-2 inline-block uppercase tracking-widest">
-                Get the Free 47-Point Robot Work Audit Checklist →
+                Get the Free 47-Point Automation Checklist →
               </a>
             </p>
           </motion.div>

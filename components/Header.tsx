@@ -78,12 +78,16 @@ const Header: React.FC = () => {
         </Link>
 
         <nav className="hidden md:flex items-center space-x-8 text-sm font-bold tracking-widest uppercase text-gray-400">
+          <NavLink to="#how-it-works" className="hover:text-white transition-colors duration-300 relative group">
+            How It Works
+            <span className="absolute -bottom-1 left-0 w-0 h-px bg-red-600 group-hover:w-full transition-all duration-300" />
+          </NavLink>
           <NavLink to="#services" className="hover:text-white transition-colors duration-300 relative group">
             Services
             <span className="absolute -bottom-1 left-0 w-0 h-px bg-red-600 group-hover:w-full transition-all duration-300" />
           </NavLink>
           <NavLink to="#roi" className="hover:text-white transition-colors duration-300 relative group">
-            ROI
+            Results
             <span className="absolute -bottom-1 left-0 w-0 h-px bg-red-600 group-hover:w-full transition-all duration-300" />
           </NavLink>
           <NavLink to="/blog" className="hover:text-white transition-colors duration-300 relative group">
@@ -119,7 +123,7 @@ const Header: React.FC = () => {
             rel="noopener noreferrer"
             className="hidden md:block bg-red-600 text-white px-6 py-3 hover:bg-red-500 transition-all duration-300 btn-primary font-black text-xs tracking-widest"
           >
-            Book Audit
+            Book Free Audit →
           </a>
         </nav>
 
@@ -156,8 +160,9 @@ const Header: React.FC = () => {
           >
             <div className="p-8 flex flex-col space-y-8">
               <div className="flex flex-col space-y-6 text-left">
+                <NavLink to="#how-it-works" className="text-4xl font-black text-white uppercase tracking-tighter hover:text-red-600 transition-colors">How It Works</NavLink>
                 <NavLink to="#services" className="text-4xl font-black text-white uppercase tracking-tighter hover:text-red-600 transition-colors">Services</NavLink>
-                <NavLink to="#roi" className="text-4xl font-black text-white uppercase tracking-tighter hover:text-red-600 transition-colors">ROI</NavLink>
+                <NavLink to="#roi" className="text-4xl font-black text-white uppercase tracking-tighter hover:text-red-600 transition-colors">Results</NavLink>
                 <NavLink to="/blog" className="text-4xl font-black text-white uppercase tracking-tighter hover:text-red-600 transition-colors">Insights</NavLink>
               </div>
 
@@ -193,7 +198,7 @@ const Header: React.FC = () => {
                   rel="noopener noreferrer"
                   className="bg-red-600 text-white px-8 py-5 font-black uppercase tracking-[0.4em] text-xs text-center hover:bg-red-500 transition-colors"
                 >
-                  Book Audit
+                  Book Free Audit →
                 </a>
               </div>
 
