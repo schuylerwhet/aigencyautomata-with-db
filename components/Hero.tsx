@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative pt-28 pb-20 bg-black overflow-hidden">
+    <section className="relative mt-20 pt-16 pb-20 bg-black overflow-hidden">
       {/* Background Layer: Swiss Grid */}
       <div className="absolute top-0 left-0 w-full h-full swiss-grid-lines opacity-10 pointer-events-none"></div>
 
